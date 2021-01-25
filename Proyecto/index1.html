@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In The University</title>
+    <link rel="stylesheet" href="Styles/styleIndex.css">
+    <link rel="shortcut icon" href="Imagenes/CompensarLogo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="gridContainer">
+        <div class="itemSesion">
+            <img src="Imagenes/In The University.png" alt="" width="300px">
+            
+                <h4>Nombres y Apellidos</h4>
+                <input type="text" id="NombreUsuario">
+                <h4>Correo electronico</h4>
+                <input type="email" id="CorreoElectronico">
+                <h4>Carrera </h4>
+                <select name="select" id="Carrera" required>
+                    <option value="Ingenieria de Software" selected>Ingenieria de Software</option>
+                    <option value="Ingenieria de Sistemas">Ingenieria de Sistemas</option>
+                    <option value="Ingenieria de telecomunicaciones">Ingenieria de telecomunicaciones</option>
+                </select>
+            
+            <div class="itemBoton">
+               <button onclick="writeData()">Confirmar</button>
+                
+            </div>
+        </div>
+        
+    </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCLSZWfzcVbxSj8GlxF07JGnoYmFOmjf2A",
+    authDomain: "in-the-university.firebaseapp.com",
+    databaseURL: "https://in-the-university.firebaseio.com",
+    projectId: "in-the-university",
+    storageBucket: "in-the-university.appspot.com",
+    messagingSenderId: "708108807597",
+    appId: "1:708108807597:web:f3885bfac3833654da4524"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  function writeData(){
+    firebase.database().ref("User").push({
+        nombre:document.getElementById("NombreUsuario").value,
+        correo:document.getElementById("CorreoElectronico").value,
+        carrera:document.getElementById("Carrera").value
+    },()=>{
+      window.location="inicio.html";
+    });
+    
+  } 
+  
+</script>
+
+</body>
+
+</html>

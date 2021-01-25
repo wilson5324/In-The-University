@@ -1,0 +1,43 @@
+body{
+    background: url(https://thecouch.world/wp-content/uploads/2017/01/firewatch-img-02.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contenedorIzq{
+    display: grid;
+    grid-template-areas: "img texto texto texto texto";
+    margin: 100px 10%;
+    border: black solid 2px;
+    background-color:  rgba(255, 166, 0, 0.432);
+    border-radius: 400px;
+}
+.contenedorDer{
+    display: grid;
+    grid-template-areas: "texto texto texto img";
+    margin: 100px 10%;
+    border: black solid 2px;
+    background-color:  rgba(255, 166, 0, 0.432);
+    border-radius: 400px;
+}
+.img{
+ grid-area: img;
+    padding: 0px;
+    padding: 10px 30px;
+}
+.imgDer{
+    grid-area: img;
+    padding: 0px;
+    padding: 10px 30px;
+    text-align: right;
+}
+.img img{
+    border-radius: 300px;
+}
+.imgDer img{
+    border-radius: 300px;
+}
+.texto{
+    grid-area: texto;
+    font-size: 30px;
+    padding:10px 10% ;
+}

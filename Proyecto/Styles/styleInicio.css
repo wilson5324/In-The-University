@@ -1,0 +1,29 @@
+.divCarrusel{
+    width: 400px;
+    float: left;
+    margin: 0px 10px;
+}
+.tarjetas{
+    float: left;
+    text-align: center;
+    margin: 40px 4%;
+    
+}
+.texto{
+    margin: 100px 7%;
+    text-align: justify;
+    background-color: rgba(255, 166, 0, 0.432);
+    padding:  0px 50px;
+    border: black solid 2px;
+    overflow: auto;
+    
+}
+
+body{
+    background: url(https://thecouch.world/wp-content/uploads/2017/01/firewatch-img-02.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+

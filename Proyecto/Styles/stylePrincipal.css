@@ -1,0 +1,78 @@
+.gridcontainer{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-row: 1;
+    grid-column: 4;
+    padding: 5px;
+    background-color:rgba(255, 166, 0, 0.719);
+    height: 100px;
+    position: sticky;
+    top: 0%;
+    padding: 0px;
+    align-items: center;
+    font-size: 25px;
+ }
+ body{
+     background-color: white;
+ }
+ .gridselec{
+     width: 200px;
+     height: 100%;
+     padding: 0px;
+     margin: 0px;
+     text-align: center;
+ }
+ .gridselec:hover{
+    background-color: orange;
+ }
+ .slider1{
+    overflow: hidden;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    text-align: justify;
+}
+.slider1 p{
+    padding: 230px;
+    padding-top: 20px;
+    padding-bottom:0px ;
+}
+.slider ul{
+    display:flex;
+    padding: 0;
+    width: 400%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 60%;
+}
+@keyframes cambio{
+    0%{margin-left:0 }
+    10%{margin-left:0 }
+    25%{margin-left: -100%}
+    45%{margin-left: -100%}
+    50%{margin-left: -200%}
+    70%{margin-left: -200%}
+    90%{margin-left: -300%}
+    100%{margin-left: -300%}
+}
+.texto{
+    border: solid red;
+}
+.divcontenedor{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.slider{
+    overflow: hidden;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+}
